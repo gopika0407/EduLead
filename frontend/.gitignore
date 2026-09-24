@@ -29,4 +29,4 @@ lerna-debug.log*
 *.sw?
 
 # OS files
-Thumbs.db
+Thumbs.dbgit check-ignore -v backend/.env
