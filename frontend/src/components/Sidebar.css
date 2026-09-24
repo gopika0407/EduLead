@@ -1,0 +1,166 @@
+/* =================================
+   MOBILE HEADER
+================================= */
+
+.mobile-header {
+    display: none;
+}
+
+.menu-button {
+    border: none;
+    background: transparent;
+    color: #0f172a;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.mobile-brand-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #14b8a6
+    );
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.mobile-brand span {
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* =================================
+   OVERLAY
+================================= */
+
+.sidebar-overlay {
+    display: none;
+}
+
+
+/* =================================
+   MOBILE / TABLET
+================================= */
+
+@media (max-width: 1024px) {
+
+    .mobile-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+
+        height: 64px;
+
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        padding: 0 18px;
+
+        background: #ffffff;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+
+    .dashboard-sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+
+        z-index: 1100;
+
+        width: 260px;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+
+        background: #0f172a;
+
+        transition:
+            left 0.25s ease;
+
+        box-shadow:
+            8px 0 25px
+            rgba(15, 23, 42, 0.15);
+    }
+
+
+    .dashboard-sidebar.sidebar-open {
+        left: 0;
+    }
+
+
+    .sidebar-brand {
+        display: flex;
+    }
+
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .sidebar-bottom {
+        margin-top: auto;
+        display: block;
+    }
+
+
+    .sidebar-overlay {
+        position: fixed;
+        inset: 0;
+
+        z-index: 1050;
+
+        display: block;
+
+        background:
+            rgba(15, 23, 42, 0.45);
+    }
+
+
+    .dashboard-main {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 64px;
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .mobile-header {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .dashboard-main {
+        padding-top: 60px;
+    }
+
+}

@@ -1,0 +1,313 @@
+/* ===============================
+   ADD FOLLOW-UP PAGE
+================================ */
+
+.add-followup-content {
+    padding: 28px 38px 45px;
+    max-width: 1050px;
+}
+
+/* ===============================
+   HEADING
+================================ */
+
+.add-followup-heading {
+    margin-bottom: 25px;
+}
+
+.add-followup-heading .back-button {
+    height: 34px;
+    padding: 0 11px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.add-followup-heading .back-button:hover {
+    background: #e2e8f0;
+    color: #2563eb;
+}
+
+.add-followup-heading .page-label {
+    margin: 0 0 7px;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.add-followup-heading h1 {
+    margin: 0 0 6px;
+    color: #0f172a;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.add-followup-heading > p:last-child {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ===============================
+   FORM CARD
+================================ */
+
+.add-followup-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+/* ===============================
+   FORM SECTION
+================================ */
+
+.form-section {
+    padding: 25px 27px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h3 {
+    margin: 0 0 5px;
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* ===============================
+   FORM GRID
+================================ */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    color: #334155;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-field label span {
+    margin-left: 3px;
+    color: #dc2626;
+}
+
+/* ===============================
+   INPUTS
+================================ */
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    outline: none;
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 13px;
+    transition: 0.2s ease;
+}
+
+.form-field input,
+.form-field select {
+    height: 44px;
+    padding: 0 12px;
+}
+
+.form-field textarea {
+    min-height: 120px;
+    padding: 12px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #94a3b8;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: #2563eb;
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.form-field select {
+    cursor: pointer;
+}
+
+.form-field select:disabled {
+    background: #f8fafc;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* ===============================
+   ERROR
+================================ */
+
+.add-followup-error {
+    margin: 20px 27px 0;
+    padding: 12px 14px;
+    border-radius: 7px;
+    background: #fef2f2;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+/* ===============================
+   ACTIONS
+================================ */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px 27px;
+    background: #f8fafc;
+}
+
+.cancel-button,
+.save-followup-button {
+    height: 40px;
+    padding: 0 18px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.cancel-button {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #475569;
+}
+
+.cancel-button:hover:not(:disabled) {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.save-followup-button {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.save-followup-button:hover:not(:disabled) {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow:
+        0 6px 15px rgba(37, 99, 235, 0.2);
+}
+
+.cancel-button:disabled,
+.save-followup-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 850px) {
+    .add-followup-content {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .add-followup-content {
+        padding: 25px 20px 35px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field.full-width {
+        grid-column: auto;
+    }
+
+    .add-followup-heading h1 {
+        font-size: 29px;
+    }
+
+    .form-section {
+        padding: 22px 20px;
+    }
+
+    .form-actions {
+        padding: 18px 20px;
+    }
+
+    .add-followup-error {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .add-followup-content {
+        padding: 22px 15px 30px;
+    }
+
+    .add-followup-heading h1 {
+        font-size: 26px;
+    }
+
+    .form-section {
+        padding: 20px 17px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        padding: 17px;
+    }
+
+    .cancel-button,
+    .save-followup-button {
+        width: 100%;
+    }
+
+    .add-followup-error {
+        margin-left: 17px;
+        margin-right: 17px;
+    }
+}
